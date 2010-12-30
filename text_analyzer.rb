@@ -25,7 +25,7 @@ good_percentage = ((good_words.length.to_f/ all_words.length.to_f) * 100).to_i
 sentences = text.gsub(/s+/,' ').strip.split(/\.|\?|\!/)
 sentences_sorted = sentences.sort_by {|sentence| sentence.length}
 one_third = sentences_sorted.length / 3
-ideal_sentences = sentences_sorted.slice(one_third, on_third + 1)
+ideal_sentences = sentences_sorted.slice(one_third, one_third + 1)
 ideal_sentences = ideal_sentences.select {|sentence| sentence =~ /is|are/}
 
 # Give the analysis back to the user
